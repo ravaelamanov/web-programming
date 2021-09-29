@@ -3,6 +3,10 @@
     flex-wrap: wrap;
 }
 
+.project {
+    width: 200px;
+}
+
 #social-medias {
     display: flex;
     justify-content: space-around;
