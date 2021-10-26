@@ -1,7 +1,11 @@
 .header__nav {
     margin-left: auto;
+    display: flex;
 }
 
-.header__nav > *:not(:last-child) {
-    margin-right: 20px;
+@media all and (max-width: 250px) {
+    .header__nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
