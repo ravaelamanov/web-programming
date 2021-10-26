@@ -1,13 +1,5 @@
-#projects {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.project {
-    width: 200px;
-}
-
-#social-medias {
-    display: flex;
-    justify-content: space-around;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
 }

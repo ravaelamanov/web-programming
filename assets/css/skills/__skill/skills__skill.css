@@ -1,0 +1,11 @@
+ @import url(_is-background-color/skill_is-background-color.css);
+ @import url(_is-centered-content/skill_is-centered-content.css);
+ @import url(_is-outlined/skill_is-outlined.css);
+ @import url(_is-rounded/skill_is-rounded.css);
+ @import url(__description/skill_description.css);
+ @import url(__image/skill__image.css);
+  
+ .skills__skill {
+    flex: 1;
+    padding: 10px;
+ }

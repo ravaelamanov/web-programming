@@ -1,0 +1,7 @@
+.skill_is-outlined {
+    border: solid lightgrey 1px;
+}
+
+.skill_is-outlined:not(:last-child) {
+    border-right: none;
+}

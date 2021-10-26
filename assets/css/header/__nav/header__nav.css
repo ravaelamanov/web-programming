@@ -1,0 +1,7 @@
+.header__nav {
+    margin-left: auto;
+}
+
+.header__nav > *:not(:last-child) {
+    margin-right: 20px;
+}

@@ -1,0 +1,6 @@
+.social-medias {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: fit-content;
+}

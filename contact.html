@@ -5,40 +5,32 @@
     <meta charset="utf-8">
     <meta name="description" content="Сайт-портфорлио Эламанова Равшана">
     <title>Эламанов Равшан - M33011</title>
-    <link rel="stylesheet" href="assets/css/outlines.css">
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/header/header.css">
+    <link rel="stylesheet" href="assets/css/footer/footer.css">
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <a href="index.html">
             <img src="assets/images/logo.png">
         </a>
-        <nav>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+        <nav class="header__nav">
+            <a href="about.html" class="nav__link nav__link_is-outlined nav__link_is-rounded">About</a>
+            <a href="contact.html" class="nav__link nav__link_is-outlined nav__link_is-rounded">Contact</a>
         </nav>
     </header>
 
     <main>
-        <h1>Contact Me</h1>
-        <div class="contact-me-form">
-            <form action="" method="POST">
-                <input type="text" name="first_name" id="first_name" placeholder="First Name">
-                <input type="text" name="last_name" id="last_name" placeholder="Last Name">
-                <input type="text" name="email" id="email" placeholder="E-Mail">
-                <textarea name="message" id="message" rows="5" placeholder="Message"></textarea>
-                <button class="send-form">Send</button>
-            </form>
-        </div>
     </main>
 
-    <footer>
-        <div id="social-medias">
-            <img class="media-icon" src="assets/images/vk-icon.png" alt="VK">
-            <img class="media-icon" src="assets/images/facebook-icon.png" alt="Facebook">
-            <img class="media-icon" src="assets/images/Instagram-icon.png" alt="Instagram">
-            <img class="media-icon" src="assets/images/telegram-icon.png" alt="Telegram">
+    <footer class="footer">
+        <div class="social-medias">
+            
+            <img class="social-medias__icon" src="assets/images/vk-icon.png" alt="VK">
+            <img class="social-medias__icon" src="assets/images/facebook-icon.png" alt="Facebook">
+            <img class="social-medias__icon" src="assets/images/Instagram-icon.png" alt="Instagram">
+            <img class="social-medias__icon" src="assets/images/telegram-icon.png" alt="Telegram">
         </div>
     </footer>
 </body>

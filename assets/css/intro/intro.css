@@ -1,0 +1,6 @@
+@import url(_is-centered-content/intro_is-centered-content.css);
+@import url(__image/intro__image.css);
+
+.intro:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
