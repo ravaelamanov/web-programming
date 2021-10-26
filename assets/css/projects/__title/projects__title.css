@@ -1,0 +1,5 @@
+@import url(_is-centered/title_is-centered.css);
+
+.projects__title {
+    margin-bottom: 10px;
+}

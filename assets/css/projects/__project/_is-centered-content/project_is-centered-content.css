@@ -1,0 +1,5 @@
+.projects__project.project_is-centered-content > * {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}

@@ -1,0 +1,10 @@
+@import url(__skill/skills__skill.css);
+@import url(_is-centered-horizontally/skills_is-centered-horiozontally.css);
+@import url(_is-outlined/skills_is-outlined.css);
+@import url(_is-rounded/skills_is-rounded.css);
+
+.skills {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+}

@@ -1,0 +1,11 @@
+.nav__link {
+    padding: 8px;
+    color: #2babb4;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.nav__link:hover, .nav__link:active {
+    background-color: #2babb4;
+    color: azure;
+}

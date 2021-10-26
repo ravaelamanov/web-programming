@@ -1,0 +1,13 @@
+@import url(__nav/header__nav.css);
+@import url(__nav/__link/nav__link.css);
+@import url(__nav/__link/_is-outlined/nav__link_is-outlined.css);
+@import url(__nav/__link/_is-rounded/nav__link_is-rounded.css);
+
+.header {
+    padding: 0%;
+    padding: 10px;
+    display: flex;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 3em;
+}

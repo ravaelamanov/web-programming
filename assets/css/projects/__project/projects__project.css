@@ -1,0 +1,12 @@
+@import url(__desc/project__desc.css);
+@import url(__link/porject__link.css);
+@import url(__logo/project__logo.css);
+@import url(__desc/project__desc.css);
+@import url(_is-centered-content/project_is-centered-content.css);
+@import url(_is-outlined/project_is-outlined.css);
+@import url(_is-rounded/project_is-rounded.css);
+
+.projects__project {
+    margin-bottom: 20px;
+    padding: 5px;
+}

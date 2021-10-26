@@ -1,0 +1,10 @@
+.description__ul {
+    text-align: center;
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 0;
+}
+
+.description__ul > :not(:last-child){
+    margin-bottom: 8px;
+}
