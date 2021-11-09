@@ -4,10 +4,22 @@
 @import url(__nav/__link/_is-rounded/nav__link_is-rounded.css);
 
 .header {
-    padding: 0%;
-    padding: 10px;
     display: flex;
+    align-items: center;
+    padding: 10px;
     margin-left: 7%;
     margin-right: 7%;
     margin-top: 3em;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; */
+}
+
+
+@media all and (max-width: 300px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }

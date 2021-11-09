@@ -5,7 +5,22 @@
     font-size: 1.3em;
 }
 
+.nav__link:not(:last-child) {
+    margin-right: 20px;
+}
+
 .nav__link:hover, .nav__link:active {
     background-color: #2babb4;
     color: azure;
+}
+
+@media all and (max-width: 250px) {
+    .nav__link {
+        margin-bottom: 10px;
+    }
+
+    .nav__link:not(:last-child) {
+        margin-right: 0;
+    }
+    
 }
