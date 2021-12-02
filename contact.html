@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/header/header.css">
     <link rel="stylesheet" href="assets/css/footer/footer.css">
     <script src="assets/css/header/__nav/__link/_is-active/nav__link_is-active.js"></script>
+    <script src="assets/scripts/timetable.js"></script>
 </head>
 
 <body>
@@ -23,6 +24,26 @@
     </header>
 
     <main>
+        <form class="timetable_form" action="">
+            <label for="max_lessons">Maximum number of lessons</label>
+            <select name="max_lessons" id="max_lessons">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+
+              <label for="days">Number of days</label>
+              <select name="days" id="days">
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+
+              <input type="submit">
+          </form> 
+          
     </main>
 
     <footer class="footer">
