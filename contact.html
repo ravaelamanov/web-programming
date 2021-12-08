@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/header/header.css">
     <link rel="stylesheet" href="assets/css/footer/footer.css">
+    <link rel="stylesheet" href="assets/css/lds-dual-ring.css">
     <script src="assets/css/header/__nav/__link/_is-active/nav__link_is-active.js"></script>
     <script src="assets/scripts/timetable.js"></script>
+    <script src="assets/scripts/fetch_api_demo.js"></script>
 </head>
 
 <body>
@@ -24,6 +26,10 @@
     </header>
 
     <main>
+        <div class="lds-dual-ring"></div>
+        <table class="posts-table"></table>
+        <p class="p_error"></p>
+
         <form class="timetable_form">
             <label for="max_classes">Maximum number of lessons</label>
             <select name="max_classes" id="max_classes">
