@@ -18,6 +18,7 @@ function getRandomInt(max) {
 
 function renderResponse(data) {
 
+    $("#success-toast").toast('show')
     hidePreloader()
 
     table = document.getElementsByClassName(posts_table)[0]
@@ -48,15 +49,24 @@ function renderResponse(data) {
 }
 
 function displayError() {
+    $("#error-toast").toast('show')
     hidePreloader()
     p_error = document.getElementsByClassName("p_error")[0]
     p_error.innerHTML = "Error occured while fetching posts"
 }
 
 
-fetch(url, { signal: controller.signal })
-    .then(response => response.json())
-    .then(data => renderResponse(data))
-    .catch((error) => {
+document.addEventListener("DOMContentLoaded", function() {
+    if (getRandomInt(2) == 0) {
+        fetch(url, { signal: controller.signal })
+        .then(response => response.json())
+        .then(data => renderResponse(data))
+        .catch((error) => {
+            displayError()
+        })   
+    }
+    else {
         displayError()
-    })   
+    }
+    
+})

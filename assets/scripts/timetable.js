@@ -5,18 +5,22 @@ const weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 var maxClasses
 var days
 var timetable
+var form
+var table
+var saveButton
 
 function createTable(rows, cols, cellValueSupplier) {
     var table = document.createElement('table')
     table.setAttribute('id', tableId)
 
     headerRow = document.createElement("tr")
-    
+
     for (const weekDay of weekDays.slice(0, cols)) {
         th = document.createElement("th")
         th.innerHTML = weekDay
         headerRow.appendChild(th)
     }
+    table.appendChild(headerRow)
 
 
     for (let i = 0; i < rows; i++) {
@@ -51,7 +55,7 @@ function saveTable() {
             var input = document.getElementById(i.toString() + j.toString()).value
             // localStorage.setItem(i.toString() + j.toString(), input)
             let key = i.toString() + j.toString()
-            timetable.cells[key] = input            
+            timetable.cells[key] = input
         }
     }
 
@@ -73,33 +77,34 @@ function generateTimetable() {
     maxClasses = document.getElementById("max_classes").value
     days = document.getElementById("days").value
 
-    var table
-
     table = document.getElementById(tableId)
-    saveButton = document.getElementById(saveButtonId)
     if (table != null) {
-        if (confirm("Generated timetable will override the existing one. Do you agree?")) {
-            table.remove()
-            saveButton.remove()
-            saveButton = null
-        }
-        else {
-            return
-        }
+        $('#exampleModal').modal('show')
     }
+    else {
+        generateTableImpl()
+    }
+}
 
+function generateTableImpl() {
     table = createTable(maxClasses, days, localStorageSupplier)
     form.appendChild(table)
 
+    if (saveButton == null) {
+        form.appendChild(createSaveButton())
+    }
+}
+
+function createSaveButton() {
+    saveButton = document.getElementById(saveButtonId)
     if (saveButton == null) {
         saveButton = document.createElement("input")
         saveButton.setAttribute("type", "button")
         saveButton.setAttribute("id", saveButtonId)
         saveButton.onclick = saveTable
         saveButton.value = "Save"
-        form.appendChild(saveButton)
     }
-
+    return saveButton
 }
 
 function generateTimetableWrapper(event) {
@@ -112,6 +117,12 @@ function generateTimetableWrapper(event) {
 window.onload = function () {
     form = document.getElementsByClassName("timetable_form")[0]
     form.addEventListener("submit", generateTimetableWrapper)
+    $("#modal-ok-button").click(function() {
+        table.remove()
+        saveButton.remove()
+        saveButton = null
+        generateTableImpl()
+    })
 
     timetableStr = localStorage.getItem("timetable")
 
